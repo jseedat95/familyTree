@@ -59,7 +59,7 @@ const FamilyTree = () => {
 
   // Build the complete tree structure
   const nooraan = {
-    person: { name: "Nooraan Ally", dob: "9 July 1965", spouse: "Hussein Amanjee (22 Sep 1962)" },
+    person: { name: "Nooraan Ally", dob: "9 July 1965", spouse: "Hussein Ebrahim Amanjee (22 Sep 1962)" },
     id: "nooraan",
     children: [
       {
