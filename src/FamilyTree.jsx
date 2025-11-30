@@ -358,8 +358,11 @@ const FamilyTree = () => {
         </h1>
         <p className="text-lg text-gray-700 mb-8">Click to expand/collapse family branches and explore your heritage</p>
 
-        <div className="bg-white/80 backdrop-blur rounded-2xl shadow-2xl p-8 border-4 border-gradient-to-r from-rose-300 to-amber-300 overflow-x-auto w-max">
-          <Person person={founder.person} id={founder.id} children={founder.children} depth={0} />
+        {/* Only the tree area scrolls horizontally */}
+        <div className="overflow-x-auto">
+          <div className="bg-white/80 backdrop-blur rounded-2xl shadow-2xl p-8 border-4 border-gradient-to-r from-rose-300 to-amber-300 min-w-[600px] inline-block">
+            <Person person={founder.person} id={founder.id} children={founder.children} depth={0} />
+          </div>
         </div>
         
         <div className="mt-8 text-base text-gray-700 bg-gradient-to-r from-amber-100 to-orange-100 p-6 rounded-2xl shadow-lg border-2 border-amber-300">
