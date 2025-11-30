@@ -29,8 +29,7 @@ const FamilyTree = () => {
     return (
       <div className="my-2">
         <div
-          className={`flex items-start gap-3 p-3 sm:p-4 text-[15px] sm:text-base ${colorClass} border-2 rounded-xl transition-all duration-200 cursor-pointer shadow-sm hover:shadow-md max-w-full overflow-auto break-words`}
-          style={{ wordBreak: 'break-word' }}
+          className={`flex items-start gap-3 p-3 sm:p-4 text-[15px] sm:text-base ${colorClass} border-2 rounded-xl transition-all duration-200 cursor-pointer shadow-sm hover:shadow-md`}
           onClick={() => hasChildren && toggleExpand(id)}
         >
           {hasChildren ? (
@@ -359,7 +358,7 @@ const FamilyTree = () => {
         </h1>
         <p className="text-lg text-gray-700 mb-8">Click to expand/collapse family branches and explore your heritage</p>
 
-        <div className="bg-white/80 backdrop-blur rounded-2xl shadow-2xl p-8 border-4 border-gradient-to-r from-rose-300 to-amber-300">
+        <div className="bg-white/80 backdrop-blur rounded-2xl shadow-2xl p-8 border-4 border-gradient-to-r from-rose-300 to-amber-300 overflow-x-auto w-max">
           <Person person={founder.person} id={founder.id} children={founder.children} depth={0} />
         </div>
         
