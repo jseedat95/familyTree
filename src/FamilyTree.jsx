@@ -28,8 +28,9 @@ const FamilyTree = () => {
 
     return (
       <div className="my-2">
-        <div 
-          className={`flex items-start gap-3 p-3 ${colorClass} border-2 rounded-xl transition-all duration-200 cursor-pointer shadow-sm hover:shadow-md`}
+        <div
+          className={`flex items-start gap-3 p-3 sm:p-4 text-[15px] sm:text-base ${colorClass} border-2 rounded-xl transition-all duration-200 cursor-pointer shadow-sm hover:shadow-md max-w-full overflow-auto break-words`}
+          style={{ wordBreak: 'break-word' }}
           onClick={() => hasChildren && toggleExpand(id)}
         >
           {hasChildren ? (
@@ -37,10 +38,10 @@ const FamilyTree = () => {
           ) : (
             <div className="w-5 flex-shrink-0" />
           )}
-          <div className="flex-1">
-            <div className="font-bold text-gray-800 text-base">{person.name}</div>
-            {person.dob && <div className="text-sm text-gray-700 mt-1">🎂 Born: {person.dob}</div>}
-            {person.spouse && <div className="text-sm text-gray-700 mt-0.5">💑 Married: {person.spouse}</div>}
+          <div className="flex-1 min-w-0">
+            <div className="font-bold text-gray-800 text-base break-words">{person.name}</div>
+            {person.dob && <div className="text-sm text-gray-700 mt-1 break-words">🎂 Born: {person.dob}</div>}
+            {person.spouse && <div className="text-sm text-gray-700 mt-0.5 break-words">💑 Married: {person.spouse}</div>}
           </div>
         </div>
         {hasChildren && isExpanded && (
@@ -146,7 +147,7 @@ const FamilyTree = () => {
         person: { name: "Muhammed Akoodie", dob: "26 Feb 1990" },
         id: "muhammed-akoodie",
         children: [
-          { person: { name: "Uyanah", dob: "14 Oct 2020" }, id: "uyanah", children: [] }
+          { person: { name: "Liyana", dob: "14 Oct 2020" }, id: "liyana", children: [] }
         ]
       },
       {
