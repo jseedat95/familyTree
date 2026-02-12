@@ -330,6 +330,28 @@ const FamilyTree = () => {
     children: [fadia, zulweena, riyadh]
   };
 
+  const yunus = {
+    person: { name: "Yunus Ally", dob: "10 October 1988", spouse: "Shahkira (20 November 1989)" },
+    id: "yunus",
+    children: [
+      { person: { name: "Hafsah Ally", dob: "26 December 2018" }, id: "hafsah", children: [] },
+      { person: { name: "Waael Ally", dob: "2 December 2020" }, id: "waael", children: [] },
+      { person: { name: "Jabir Ally", dob: "16 July 2025" }, id: "jabir", children: [] }
+    ]
+  };
+
+  const ahmad = {
+    person: { name: "Ahmad Ally", dob: "9 October 1955", spouse: "Aziza Ebrahim Jaffer (6 December 1954)" },
+    id: "ahmad",
+    children: [yunus]
+  };
+
+  const ahmedRaooda = {
+    person: { name: "Ahmed Ally", dob: "3 June 1915", spouse: "Raooda Van Wyk" },
+    id: "ahmed-raooda",
+    children: [ahmad]
+  };
+
   const ahmed = {
     person: { name: "Ahmed Ally", dob: "3 June 1915", spouse: "Khatija Esa (31 Dec 1921)" },
     id: "ahmed",
@@ -347,7 +369,7 @@ const FamilyTree = () => {
   const founder = {
     person: { name: "Ismail Ally", spouse: "Gadija Toefy (b. 1896)" },
     id: "founder",
-    children: [ahmed]
+    children: [ahmed, ahmedRaooda]
   };
 
   return (
@@ -371,15 +393,15 @@ const FamilyTree = () => {
           
           <div className="mt-6 grid grid-cols-2 md:grid-cols-5 gap-4">
             <div className="bg-white/70 rounded-xl p-4 text-center shadow-md">
-              <div className="text-3xl font-bold text-rose-600">1</div>
-              <div className="text-sm font-semibold text-gray-700 mt-1">Child</div>
+              <div className="text-3xl font-bold text-rose-600">2</div>
+              <div className="text-sm font-semibold text-gray-700 mt-1">Children</div>
             </div>
             <div className="bg-white/70 rounded-xl p-4 text-center shadow-md">
-              <div className="text-3xl font-bold text-orange-600">7</div>
+              <div className="text-3xl font-bold text-orange-600">8</div>
               <div className="text-sm font-semibold text-gray-700 mt-1">Grandchildren</div>
             </div>
             <div className="bg-white/70 rounded-xl p-4 text-center shadow-md">
-              <div className="text-3xl font-bold text-amber-600">17</div>
+              <div className="text-3xl font-bold text-amber-600">18</div>
               <div className="text-sm font-semibold text-gray-700 mt-1">Great Grandchildren</div>
             </div>
             <div className="bg-white/70 rounded-xl p-4 text-center shadow-md">
@@ -387,7 +409,7 @@ const FamilyTree = () => {
               <div className="text-sm font-semibold text-gray-700 mt-1">Great Great Grandchildren</div>
             </div>
             <div className="bg-white/70 rounded-xl p-4 text-center shadow-md">
-              <div className="text-3xl font-bold text-blue-600">12</div>
+              <div className="text-3xl font-bold text-blue-600">15</div>
               <div className="text-sm font-semibold text-gray-700 mt-1">Great Great Great Grandchildren</div>
             </div>
           </div>
