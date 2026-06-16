@@ -112,7 +112,9 @@ const FamilyTree = () => {
       {
         person: { name: "Azraa Mohamed Joosub", dob: "17 Jan 1999", spouse: "Junaid Seedat (19 Oct 1995)" },
         id: "azraa",
-        children: []
+        children: [
+          { person: { name: "Nusaybah Seedat", dob: "23 Apr 2026" }, id: "nusaybah-seedat", children: [] }
+        ]
       },
       {
         person: { name: "Muaaz Mohamed Joosub", dob: "3 Sep 2005" },
